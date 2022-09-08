@@ -1,30 +1,17 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({
-    name: 'team'
-    ,synchronize: true,
-})
+@Entity()
 export class Team {
-
     @PrimaryGeneratedColumn()
-    teamId: number;
-
-    @Column({
-        type: 'varchar',
-        length: 100,
-        unique: true
-    })
-    teamTitle: String;
-
-    @Column({
-        type: 'varchar',
-        length: 100,
-        unique: true
-    })
-    teamEmail: string;
+    teamId: number
 
     @Column()
-    isActive: boolean;
+    teamTitle: string
+
+    @Column()
+    isActive: boolean
+
+    @Column()
+    teamEmail: string
 
 }
-

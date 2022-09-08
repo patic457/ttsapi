@@ -7,7 +7,7 @@ declare const module: any;
 
 async function hotLoad(app) {
   //Hotload
-  await app.listen(3000);
+  await app.listen(process.env.APP_PORT);
   if (module.hot) {
     module.hot.accept();
     module.hot.dispose(() => app.close());
